@@ -1,0 +1,42 @@
+<div>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light filtro">
+    <span>Filtrar por:</span>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="filtro-tipo">
+          <input id="disponivel" type="radio"  [value]= 0 name="estoque" (click)="selecionaTipo(0) "[(ngModel)]="this.btnEstoque"  ngModel required>
+          <label  for="disponivel">Todos</label>
+        </li>
+        <li class="filtro-tipo">
+          <input id="disponivel" type="radio"  [value]= 1 name="estoque" (click)="selecionaTipo(1) "[(ngModel)]="this.btnEstoque"  ngModel required>
+          <label  for="disponivel">Disponivel</label>
+        </li>
+        <li class="filtro-tipo">
+          <input id="indisponivel" type="radio" [value]= 2 name="estoque" (click)="selecionaTipo(2)" [(ngModel)]="this.btnEstoque" ngModel required>
+          <label for="indisponivel">Indisponivel</label>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Preço
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" (click)="selecionaPreco(preco)" *ngFor="let preco of precos"><input type="radio" name="preco" [value]="preco" [(ngModel)]="this.btnpreco" > {{preco}}</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorias
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" (click)="selecionaCategoria(categoria)" *ngFor="let categoria of categorias"><input type="radio" name="categoria" [value]="categoria" [(ngModel)]="this.btncategoria" > {{categoria}}</a>
+          </div>
+        </li>
+        <li>
+            <input class="btn-limpar" type="button" value="Limpar" (click)="limparFiltro()">
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+
+

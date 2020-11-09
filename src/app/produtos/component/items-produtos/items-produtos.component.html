@@ -1,0 +1,37 @@
+<ng-container class="container">
+  <h3>Resultados</h3>
+  <div class="row row-cols-4" >
+    <div class="img-container"  *ngFor="let produto of listaFiltro" >
+      <div>
+        <div >
+          <img class="imagem-produto" [src]="produto.Imagens[0].Nome" alt="">
+          <p>{{produto.Nome}}</p>
+          <ngx-stars [readonly]="true" [color]="'#3F3F41'" [size]="1"[maxStars]="5"[initialStars]="produto.NotaMedia"></ngx-stars>
+          <p><span class="item-span"> {{produto.Categoria}}-{{produto.PrecoMedio}}</span>
+            <span class="item-span" *ngIf="produto.Disponivel === true"><img class="indisponivel" src="assets/img/disponivel.jpg"> Disponivel</span>
+            <span  class="item-span" *ngIf="produto.Disponivel === false"><img class="indisponivel" src="assets/img/indisponivel.jpg" alt=""> Indisponivel</span></p>
+        </div>
+      <input type="button" value="DETALHE" class="btDetalhe" (click)="openModal(template, produto)">
+    </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #template>
+  <div class="modal-header ">
+    <h4 class="modal-title pull-left">Detalhe do Produto</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body img">
+    <img [src]="this.produto.Imagens[0].Nome" alt="">
+      <p>Nome do Produto:  {{this.produto.Nome}} </p>
+      <p>Nota: <ngx-stars [readonly]="true" [color]="'#3F3F41'" [size]="1"[maxStars]="5"[initialStars]="produto.NotaMedia"></ngx-stars></p>
+      <p>Categoria: {{produto.Categoria}} </p>
+      <p>Preço: {{produto.PrecoMedio}}</p>
+      <p *ngIf="produto.Disponivel === true">Estoque: Disponivel</p>
+      <p *ngIf="produto.Disponivel === false">Estoque: Indisponivel</p>
+  </div>
+</ng-template>
+

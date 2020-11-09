@@ -1,0 +1,32 @@
+.dropdown-filtro{
+  background-color: white;
+}
+
+.filtro-tipo{
+  margin-top: 8px;
+  margin-left: 15px;
+  margin-right: 3px;
+}
+label{
+  padding-left: 3px;
+
+}
+.filtro{
+  background-color: white!important;
+  margin-left: -15px;
+}
+.btn-limpar{
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  margin-left: 400px;
+  margin-top: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:#3F3F41;
+  font-family:'Daxline Pro Regular';
+  margin-left: 15px;
+}

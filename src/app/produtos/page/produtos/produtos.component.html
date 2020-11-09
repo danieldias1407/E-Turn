@@ -1,0 +1,11 @@
+<ng-container class="container">
+  <h1>Looks</h1>
+  <p>Conheça nossos looks</p>
+
+  <app-filtros (filtroTipo)="recebeTipo($event)" (filtroCategoria)="recebeCategoria($event)"(filtroPreco)="recebePreco($event)"></app-filtros>
+
+  <app-items-produtos [filtroCategoria]="this.categoria"  [filtroPreco]="this.preco" [tipo]="this.tipo"></app-items-produtos>
+</ng-container>
+
+
+

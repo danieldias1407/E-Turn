@@ -1,0 +1,64 @@
+p{
+  margin: 0px;
+  text-align: left;
+  width: 250px;
+  font-family: 'Daxline Pro Regular';
+}
+.container{
+  margin-left: 0px;
+}
+
+.btDetalhe{
+  width: 250px;
+  background-color: #107F92;
+  color:#ffffff ;
+  border: none;
+  height: 30px;
+}
+
+th{
+  text-align: left;
+  width: 200px;
+}
+
+td{
+  width: 200px;
+}
+.img-container{
+  height: 410px;
+}
+.imagem-produto{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+}
+.img-container div{
+  height: 360px;
+}
+.item-span{
+  font-family: 'Daxline Pro Thin';
+  font-size: 12px;
+  color: #808184;
+}
+
+.img img {
+  width: 450px;
+  height: 450px;
+  margin-left: 10px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.img p{
+  width: 420px;
+}
+
+.indisponivel{
+  width: 15px;
+  height: 15px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  object-fit: cover;
+  object-position: center top;
+}

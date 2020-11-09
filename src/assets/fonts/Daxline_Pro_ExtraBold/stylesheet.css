@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Daxline Pro ExtraBold';
+  src: url('DaxlinePro-ExtraBold.eot');
+  src: url('DaxlinePro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('DaxlinePro-ExtraBold.woff') format('woff'),
+  url('DaxlinePro-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }

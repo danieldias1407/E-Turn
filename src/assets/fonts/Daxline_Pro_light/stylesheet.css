@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Daxline Pro Light';
+  src: url('DaxlinePro-Light.eot');
+  src: url('DaxlinePro-Light.eot?#iefix') format('embedded-opentype'),
+  url('DaxlinePro-Light.woff') format('woff'),
+  url('DaxlinePro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
